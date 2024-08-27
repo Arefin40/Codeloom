@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+   :root {
+      --background: 0 0% 100%;
+      --foreground: 213 33% 13%;
+      --primary: 213 33% 13%;
+      --primary-foreground: 210 20% 98%;
+      --secondary: 220 14.3% 95.9%;
+      --secondary-foreground: 213 33% 13%;
+      --muted: 220 14.3% 95.9%;
+      --muted-foreground: 220 8.9% 46.1%;
+      --accent: 220 14.3% 95.9%;
+      --accent-foreground: 213 33% 13%;
+      --destructive: 0 84.2% 60.2%;
+      --border: 220 13% 91%;
+      --input: 220 13% 91%;
+      --green: 166 59% 46%;
+      --radius: 0.5rem;
+   }
+}
+
+@layer base {
+   * {
+      @apply border-border;
+   }
+   body {
+      @apply bg-background text-foreground;
+   }
+}
+
+@layer components {
+   .offset-header {
+      @apply pt-14 lg:pt-20;
+   }
+}
+
+@layer utilities {
+   .flex-center {
+      @apply flex items-center justify-center;
+   }
+}
