@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Mulish as FontSans, Space_Grotesk as FontFancy } from "next/font/google";
+import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
+import { ConvexClientProvider } from "@/providers/ConvexClientProvider";
 import { cn } from "@/utils";
 import "./globals.css";
 
@@ -17,6 +19,7 @@ interface LayoutProps {
 
 export default function RootLayout({ children }: LayoutProps) {
    return (
+      <ConvexAuthNextjsServerProvider>
       <html lang="en">
          <body
             className={cn(
@@ -25,8 +28,9 @@ export default function RootLayout({ children }: LayoutProps) {
                fontFancy.variable
             )}
          >
-            {children}
+                  <ConvexClientProvider>{children}</ConvexClientProvider>
          </body>
       </html>
+      </ConvexAuthNextjsServerProvider>
    );
 }
