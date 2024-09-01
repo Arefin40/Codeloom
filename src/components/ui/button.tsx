@@ -49,18 +49,29 @@ Button.displayName = "Button";
 
 export interface SlidingIconButtonProps extends ButtonProps {
    icon: React.ElementType;
+   iconClass?: string;
    side?: "left" | "right";
 }
 
 const SlidingIconButton = React.forwardRef<HTMLButtonElement, SlidingIconButtonProps>(
-   ({ icon: Icon, side = "left", className, children, ...props }, ref) => {
+   ({ icon: Icon, side = "left", className, iconClass, children, ...props }, ref) => {
       return (
          <Button ref={ref} {...props} className={cn("group gap-x-2", className)}>
-            <Icon className="size-5 opacity-100 transition-all duration-300 group-hover:-translate-x-3 group-hover:opacity-0" />
+            <Icon
+               className={cn(
+                  "size-5 opacity-100 transition-all duration-300 group-hover:-translate-x-3 group-hover:opacity-0",
+                  iconClass
+               )}
+            />
             <span className="-mr-7 block font-semibold transition-all duration-300 group-hover:-translate-x-7">
                {children}
             </span>
-            <Icon className="relative size-5 translate-x-7 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100" />
+            <Icon
+               className={cn(
+                  "relative size-5 translate-x-7 opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:opacity-100",
+                  iconClass
+               )}
+            />
          </Button>
       );
    }

@@ -19,6 +19,7 @@
       --input: 220 13% 91%;
       --green: 166 59% 46%;
       --radius: 0.5rem;
+      --colourful-gradient: linear-gradient(to right, #e3545c, #c84d9d, #885dd1, #2f86bc, #01a89e);
    }
 }
 
