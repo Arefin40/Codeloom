@@ -2,3 +2,4 @@
 .prettierrc
 node_modules
 bun.lockb
+convex/_generated
