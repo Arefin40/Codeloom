@@ -1,11 +1,16 @@
+import React from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
+import { Unauthenticated } from "convex/react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { mainNavigations } from "@/utils/navigations";
 
-const MobileSidebar = () => {
-   const user = false;
+interface MobileSidebarProps {
+   user: User | null;
+}
+
+const MobileSidebar: React.FC<MobileSidebarProps> = ({}) => {
    const navigations = [...mainNavigations];
 
    return (
@@ -42,16 +47,16 @@ const MobileSidebar = () => {
             </nav>
 
             <div className="flex flex-grow flex-col px-4 pb-4">
-               {!user && (
+               <Unauthenticated>
                   <div className="mt-auto grid grid-cols-2 items-center gap-x-2">
                      <Button size="sm" className="rounded-full" asChild>
                         <Link href="/login">Sign In</Link>
                      </Button>
-                     <Button size="sm" variant="ghost" className="rounded-full">
-                        Sign Up
+                     <Button size="sm" variant="ghost" className="rounded-full" asChild>
+                        <Link href="/register">Sign Up</Link>
                      </Button>
                   </div>
-               )}
+               </Unauthenticated>
             </div>
          </SheetContent>
       </Sheet>

@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Toaster } from "react-hot-toast";
 import { Mulish as FontSans, Space_Grotesk as FontFancy } from "next/font/google";
+import { MotionConfig } from "@/components/ui/motion";
 import { ConvexAuthNextjsServerProvider } from "@convex-dev/auth/nextjs/server";
 import { ConvexClientProvider } from "@/providers/ConvexClientProvider";
 import { cn } from "@/utils";
@@ -20,17 +22,20 @@ interface LayoutProps {
 export default function RootLayout({ children }: LayoutProps) {
    return (
       <ConvexAuthNextjsServerProvider>
-      <html lang="en">
-         <body
-            className={cn(
-               "relative min-h-screen bg-background font-sans font-medium text-muted-foreground antialiased",
-               fontSans.variable,
-               fontFancy.variable
-            )}
-         >
+         <MotionConfig reducedMotion="user">
+            <html lang="en">
+               <body
+                  className={cn(
+                     "relative min-h-screen bg-background font-sans font-medium text-muted-foreground antialiased",
+                     fontSans.variable,
+                     fontFancy.variable
+                  )}
+               >
+                  <Toaster />
                   <ConvexClientProvider>{children}</ConvexClientProvider>
-         </body>
-      </html>
+               </body>
+            </html>
+         </MotionConfig>
       </ConvexAuthNextjsServerProvider>
    );
 }
