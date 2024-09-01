@@ -27,6 +27,7 @@ const config = {
             input: "hsl(var(--input))",
             background: "hsl(var(--background))",
             foreground: "hsl(var(--foreground))",
+            alabaster: "hsl(var(--alabaster))",
             primary: {
                DEFAULT: "hsl(var(--primary))",
                foreground: "hsl(var(--primary-foreground))"
