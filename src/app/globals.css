@@ -20,6 +20,7 @@
       --green: 166 59% 46%;
       --alabaster: 45 22% 96%;
       --radius: 0.5rem;
+      --colourful-gradient: linear-gradient(to right, #e3545c, #c84d9d, #885dd1, #2f86bc, #01a89e);
    }
 }
 

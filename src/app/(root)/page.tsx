@@ -1,7 +1,11 @@
+import HeroSection from "./HeroSection";
+import NewsletterSection from "./NewsletterSection";
+
 export default function Home() {
    return (
-      <div className="flex-center h-screen flex-grow">
-         <h1 className="text-5xl font-semibold text-gray-800">Hello World</h1>
-      </div>
+      <main className="space-y-8 pb-8 sm:space-y-12 sm:pb-12 lg:space-y-16 lg:pb-16">
+         <HeroSection />
+         <NewsletterSection />
+      </main>
    );
 }
