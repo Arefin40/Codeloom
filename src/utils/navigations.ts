@@ -16,7 +16,7 @@ export const mainNavigations = [
    { path: "/courses", name: "Courses", icon: Presentation },
    { path: "/blogs", name: "Blog", icon: ScrollText },
    { path: "/help-center", name: "Support", icon: CircleHelp },
-   { path: "/contact", name: "Contact us", icon: SquareUserRound }
+   { path: "/contact", name: "Contact", icon: SquareUserRound }
 ];
 
 export const dashboardNavigations = [
