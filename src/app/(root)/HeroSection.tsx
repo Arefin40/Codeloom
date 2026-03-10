@@ -5,7 +5,7 @@ import { ThumbsUp, Video } from "lucide-react";
 
 const HeroSection = () => {
    return (
-      <section className="offset-header bg-alabaster flex min-h-screen flex-col">
+      <section className="offset-header flex min-h-screen flex-col bg-alabaster">
          <div className="container grid flex-grow gap-16 py-14 lg:h-full lg:py-20 xl:grid-cols-2">
             <div className="order-2 grid content-center gap-y-6 text-center sm:order-1 xl:pl-20 xl:text-left">
                <h1 className="text-balance font-fancy text-5xl font-semibold tracking-tight text-foreground sm:text-6xl md:text-7xl xl:text-8xl">

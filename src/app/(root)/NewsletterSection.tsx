@@ -41,11 +41,11 @@ const NewsletterSection = () => {
                   </div>
                </div>
 
-               <div className="bg-colourful-gradient absolute inset-x-0 bottom-0 h-2" />
+               <div className="absolute inset-x-0 bottom-0 h-2 bg-colourful-gradient" />
             </div>
 
             <div className="absolute inset-0 -top-4 overflow-hidden md:-top-8">
-               <PaperPlane className="motion-safe:animate-float -ml-[60%] w-[160%] sm:ml-0 sm:w-auto" />
+               <PaperPlane className="-ml-[60%] w-[160%] motion-safe:animate-float sm:ml-0 sm:w-auto" />
             </div>
          </main>
       </section>

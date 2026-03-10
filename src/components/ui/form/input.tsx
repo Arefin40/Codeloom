@@ -24,7 +24,7 @@ const InputBase = React.forwardRef<HTMLInputElement, InputBaseProps>(
                id={props.name}
                className={cn(
                   { "pl-10": startIcon, "pl-3": !startIcon, "pr-10": endIcon, "pr-3": !endIcon },
-                  "flex h-11 w-full rounded-md border border-input bg-background py-2 text-sm ring-offset-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/80 disabled:cursor-not-allowed disabled:opacity-50",
+                  "flex h-11 w-full rounded-md border border-input bg-background py-2 text-sm text-foreground ring-offset-2 ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50",
                   className
                )}
                ref={ref}
@@ -54,7 +54,7 @@ export interface InputProps extends InputBaseProps {
 const Input = React.forwardRef<HTMLInputElement, InputProps>(
    ({ name, label, labelClass, description, descriptionClass, error, ...props }, ref) => {
       return (
-         <div className="flex-grow space-y-2">
+         <div className="w-full flex-grow space-y-2">
             {label && (
                <Label htmlFor={name} className={labelClass}>
                   {label}

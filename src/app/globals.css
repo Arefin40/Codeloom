@@ -14,11 +14,14 @@
       --muted-foreground: 220 8.9% 46.1%;
       --accent: 220 14.3% 95.9%;
       --accent-foreground: 213 33% 13%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 224 71.4% 4.1%;
       --destructive: 0 84.2% 60.2%;
       --border: 220 13% 91%;
       --input: 220 13% 91%;
       --green: 166 59% 46%;
       --alabaster: 45 22% 96%;
+      --ring: 0, 0%, 60%;
       --radius: 0.5rem;
       --colourful-gradient: linear-gradient(to right, #e3545c, #c84d9d, #885dd1, #2f86bc, #01a89e);
    }
